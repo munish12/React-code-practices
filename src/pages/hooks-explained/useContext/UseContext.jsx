@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import { UseContextCodeSnippet } from './UseContextCodeSnippet'

@@ -29,7 +29,6 @@ function OffcanvasExample () {
                   <Nav.Link as={NavLink} to="/useMemo">useMemo</Nav.Link>
                   <Nav.Link as={NavLink} to="/useCallback">useCallback</Nav.Link>
                   <Nav.Link as={NavLink} to="/useContext">UseContext</Nav.Link>
-                  
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

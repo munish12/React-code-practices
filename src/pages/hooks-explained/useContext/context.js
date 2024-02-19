@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react'
+import { createContext, useContext } from 'react'
 const defaultUserValue = undefined; // or set an initial User object
 
 export const DashboardContext = createContext(defaultUserValue);

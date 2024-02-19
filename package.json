@@ -1,5 +1,6 @@
 {
   "name": "my-app",
+  "homepage": "https://munish12.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -76,7 +77,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -151,5 +154,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
