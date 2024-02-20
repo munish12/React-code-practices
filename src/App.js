@@ -9,6 +9,8 @@ import UseEffect from './pages/hooks-explained/useEffect/UseEffect'
 import UseMemo from './pages/hooks-explained/useMemo/UseMemo'
 import UseCallback from './pages/hooks-explained/useCallback/UseCallback'
 import UseContext from './pages/hooks-explained/useContext/UseContext'
+import UseRef from './pages/hooks-explained/useRef/useRef'
+import UseReducer from './pages/hooks-explained/useReducer/useReducer'
 
 
 function App() {
@@ -24,7 +26,9 @@ function App() {
             <Route path='/useMemo' element={<UseMemo />} />
             <Route path='/useCallback' element={<UseCallback />} />
             <Route path='/useContext' element={<UseContext />} />
-            
+            <Route path='/UseRef' element={<UseRef />} />
+            <Route path='/UseReducer' element={<UseReducer />} />
+
           </Routes>
         </div>
     </Router>
