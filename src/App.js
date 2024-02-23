@@ -11,6 +11,7 @@ import UseCallback from './pages/hooks-explained/useCallback/UseCallback'
 import UseContext from './pages/hooks-explained/useContext/UseContext'
 import UseRef from './pages/hooks-explained/useRef/useRef'
 import UseReducer from './pages/hooks-explained/useReducer/useReducer'
+import DataFetching from './pages/hooks-explained/dataFetching/dataFetching'
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
             <Route path='/useContext' element={<UseContext />} />
             <Route path='/UseRef' element={<UseRef />} />
             <Route path='/UseReducer' element={<UseReducer />} />
-
+            <Route path='/data-fetching' element={<DataFetching />} />
           </Routes>
         </div>
     </Router>
