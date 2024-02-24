@@ -12,6 +12,7 @@ import UseContext from './pages/hooks-explained/useContext/UseContext'
 import UseRef from './pages/hooks-explained/useRef/useRef'
 import UseReducer from './pages/hooks-explained/useReducer/useReducer'
 import DataFetching from './pages/hooks-explained/dataFetching/dataFetching'
+import UseDebounce from './pages/hooks-explained/useDebounce/useDebounce'
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
             <Route path='/UseRef' element={<UseRef />} />
             <Route path='/UseReducer' element={<UseReducer />} />
             <Route path='/data-fetching' element={<DataFetching />} />
+            <Route path='/UseDebounce' element={<UseDebounce />} />
           </Routes>
         </div>
     </Router>

@@ -21,7 +21,8 @@ const cardData = [
           { title: 'useCallback', path: '/useCallback' },
           { title: 'UseContext', path: '/UseContext' },
           { title: 'UseRef', path: '/UseRef' },
-          { title: 'UseReducer', path: '/UseReducer' }
+          { title: 'UseReducer', path: '/UseReducer' },
+          { title: 'UseDebounce', path: '/UseDebounce' }
         ]
       }
     ]
