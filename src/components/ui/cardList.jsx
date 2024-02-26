@@ -38,6 +38,17 @@ const cardData = [
         body: [{ title: 'Data Fetching', path: '/data-fetching' }]
       }
     ]
+  },
+  {
+    id: 3,
+    title: 'React Query',
+    text: 'React Query is a JavaScript library designed to simplify and optimize data fetching and state management in React applications, particularly those that interact with remote data sources such as APIs. It provides a set of hooks and utilities that make it easy to fetch, cache, update, and synchronize data across components.',
+    accordionItems: [
+      {
+        id: '2',
+        body: [{ title: 'React Query', path: '/reactQuery' }]
+      }
+    ]
   }
 ]
 

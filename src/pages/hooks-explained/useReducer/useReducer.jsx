@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react'
-import { Alert, Button, ButtonGroup } from 'react-bootstrap'
+import { Alert, Button } from 'react-bootstrap'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import { UseReducerCodeSnippet } from './useReducerCodeSnippet'
