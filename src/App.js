@@ -15,6 +15,7 @@ import DataFetching from './pages/hooks-explained/dataFetching/dataFetching'
 import UseDebounce from './pages/hooks-explained/useDebounce/useDebounce'
 import ReactQuery from './pages/react-query/ReactQuery'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import Counter from './pages/redux-example/counter'
 
 function App () {
   const queryClient = new QueryClient({
@@ -42,6 +43,7 @@ function App () {
             <Route path='/data-fetching' element={<DataFetching />} />
             <Route path='/UseDebounce' element={<UseDebounce />} />
             <Route path='/reactQuery' element={<ReactQuery />} />
+            <Route path='/redux-example' element={<Counter />} />
           </Routes>
         </div>
       </Router>

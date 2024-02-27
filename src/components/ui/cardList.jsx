@@ -49,6 +49,24 @@ const cardData = [
         body: [{ title: 'React Query', path: '/reactQuery' }]
       }
     ]
+  },
+  {
+    id: 4,
+    title: 'Redux',
+    text: `
+            Redux Toolkit is a package that simplifies the process of managing state and writing Redux logic in React applications. It provides several utilities and abstractions that streamline common Redux tasks, such as store setup, reducer creation, and action creation.
+            Initialize Store: You create a Redux store using the createStore() function provided by Redux. You pass it the root reducer function, which combines all your application's reducers into a single reducer.
+            Dispatch Actions: Components in your application dispatch actions to the store using the dispatch function provided by the useDispatch hook (in React with React-Redux) or by using store.dispatch() directly.
+            Reducers Update State: When an action is dispatched, the root reducer function is called. It delegates the responsibility of handling the action to the appropriate reducer functions based on the action's type.
+            State Updates: Reducer functions return a new state object based on the action and the current state. Redux then updates the store's state with the new state returned by the reducer.
+            Components Re-render: Components that are subscribed to the store's state (using useSelector in React with React-Redux) will be re-rendered with the updated state, reflecting the changes in the UI.
+`,
+    accordionItems: [
+      {
+        id: '3',
+        body: [{ title: 'Redux example', path: '/redux-example' }]
+      }
+    ]
   }
 ]
 
