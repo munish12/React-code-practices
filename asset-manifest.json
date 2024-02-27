@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/React-code-practices/static/css/main.72585b45.css",
-    "main.js": "/React-code-practices/static/js/main.37f01baf.js",
+    "main.js": "/React-code-practices/static/js/main.0167fb4a.js",
     "static/js/787.28cb0dcd.chunk.js": "/React-code-practices/static/js/787.28cb0dcd.chunk.js",
     "service-worker.js": "/React-code-practices/service-worker.js",
     "index.html": "/React-code-practices/index.html",
     "main.72585b45.css.map": "/React-code-practices/static/css/main.72585b45.css.map",
-    "main.37f01baf.js.map": "/React-code-practices/static/js/main.37f01baf.js.map",
+    "main.0167fb4a.js.map": "/React-code-practices/static/js/main.0167fb4a.js.map",
     "787.28cb0dcd.chunk.js.map": "/React-code-practices/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.72585b45.css",
-    "static/js/main.37f01baf.js"
+    "static/js/main.0167fb4a.js"
   ]
 }
