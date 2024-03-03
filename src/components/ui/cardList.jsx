@@ -22,7 +22,8 @@ const cardData = [
           { title: 'UseContext', path: '/UseContext' },
           { title: 'UseRef', path: '/UseRef' },
           { title: 'UseReducer', path: '/UseReducer' },
-          { title: 'UseDebounce', path: '/UseDebounce' }
+          { title: 'UseDebounce', path: '/UseDebounce' },
+          { title: 'UseImperativeHandling', path: '/UseImperativeHandling' }
         ]
       }
     ]

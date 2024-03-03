@@ -16,6 +16,7 @@ import UseDebounce from './pages/hooks-explained/useDebounce/useDebounce'
 import ReactQuery from './pages/react-query/ReactQuery'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import Counter from './pages/redux-example/counter'
+import ParentComponent from './pages/hooks-explained/useImperativeHandling/ParentComponent'
 
 function App () {
   const queryClient = new QueryClient({
@@ -42,6 +43,7 @@ function App () {
             <Route path='/UseReducer' element={<UseReducer />} />
             <Route path='/data-fetching' element={<DataFetching />} />
             <Route path='/UseDebounce' element={<UseDebounce />} />
+            <Route path='/UseImperativeHandling' element={<ParentComponent />} />
             <Route path='/reactQuery' element={<ReactQuery />} />
             <Route path='/redux-example' element={<Counter />} />
           </Routes>

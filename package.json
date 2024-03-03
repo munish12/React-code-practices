@@ -1,6 +1,5 @@
 {
   "name": "my-app",
-  "homepage": "https://munish12.github.io/React-code-practices",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -80,8 +79,8 @@
     "workbox-webpack-plugin": "^6.4.1"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "start": "NODE_ENV=development node scripts/start.js",
+    "build": "NODE_ENV=production node scripts/build.js",
     "test": "node scripts/test.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
@@ -90,7 +89,10 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "node/no-process-env": "off"
+    }
   },
   "browserslist": {
     "production": [
@@ -161,6 +163,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "gh-pages": "^6.1.1"
   }
 }
