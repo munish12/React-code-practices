@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.03e69aa2.css",
-    "main.js": "/static/js/main.64a7125d.js",
-    "static/js/787.d4aba7ab.chunk.js": "/static/js/787.d4aba7ab.chunk.js",
-    "service-worker.js": "/service-worker.js",
-    "index.html": "/index.html",
-    "main.03e69aa2.css.map": "/static/css/main.03e69aa2.css.map",
-    "main.64a7125d.js.map": "/static/js/main.64a7125d.js.map",
-    "787.d4aba7ab.chunk.js.map": "/static/js/787.d4aba7ab.chunk.js.map"
+    "main.css": "/React-code-practices/static/css/main.03e69aa2.css",
+    "main.js": "/React-code-practices/static/js/main.333e4761.js",
+    "static/js/787.d4aba7ab.chunk.js": "/React-code-practices/static/js/787.d4aba7ab.chunk.js",
+    "service-worker.js": "/React-code-practices/service-worker.js",
+    "index.html": "/React-code-practices/index.html",
+    "main.03e69aa2.css.map": "/React-code-practices/static/css/main.03e69aa2.css.map",
+    "main.333e4761.js.map": "/React-code-practices/static/js/main.333e4761.js.map",
+    "787.d4aba7ab.chunk.js.map": "/React-code-practices/static/js/787.d4aba7ab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.03e69aa2.css",
-    "static/js/main.64a7125d.js"
+    "static/js/main.333e4761.js"
   ]
 }
