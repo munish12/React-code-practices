@@ -52,6 +52,7 @@
     "react-redux": "^9.1.0",
     "react-refresh": "^0.11.0",
     "react-router-dom": "^6.22.1",
+    "react-scripts": "^5.0.1",
     "react-syntax-highlighter": "^15.5.0",
     "resolve": "^1.20.0",
     "resolve-url-loader": "^4.0.0",
@@ -80,11 +81,10 @@
     "workbox-webpack-plugin": "^6.4.1"
   },
   "scripts": {
-    "start": "NODE_ENV=development node scripts/start.js",
-    "build": "NODE_ENV=production node scripts/build.js",
-    "test": "node scripts/test.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": [
@@ -165,6 +165,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
     "gh-pages": "^6.1.1"
   }
 }
