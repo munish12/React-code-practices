@@ -28,7 +28,7 @@ function App () {
   })
   return (
     <QueryClientProvider client={queryClient}>
-      <Router>
+    <Router basename="/React-code-practices">
         <Sidebar />
         {/* Wrap the Routes in a div with the px-5 class for padding */}
         <div className='px-5 d-flex flex-column justify-content-center align-items-center h-100 mt-5 pt-5'>
