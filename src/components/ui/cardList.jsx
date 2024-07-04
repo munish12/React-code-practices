@@ -1,59 +1,83 @@
-import React from 'react'
-import Card from 'react-bootstrap/Card'
-import ListGroup from 'react-bootstrap/ListGroup'
-import Accordion from 'react-bootstrap/Accordion'
-import Button from 'react-bootstrap/Button'
-import { Link } from 'react-router-dom'
-import { Col, Container, Row, Stack } from 'react-bootstrap'
+import React from "react";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  Box,
+  Grid,
+  Card,
+  CardBody,
+  SimpleGrid,
+  Heading,
+  Text,
+} from "@chakra-ui/react";
+
+import { Link } from "react-router-dom";
 
 const cardData = [
   {
     id: 1,
-    title: 'React Hooks',
-    text: 'React Hooks defintion with examples',
+    title: "React Hooks",
+    text: "React Hooks defintion with examples",
     accordionItems: [
       {
-        id: '0',
+        id: "0",
         body: [
-          { title: 'useState', path: '/useState' },
-          { title: 'useEffect', path: '/useEffect' },
-          { title: 'useMemo', path: '/useMemo' },
-          { title: 'useCallback', path: '/useCallback' },
-          { title: 'UseContext', path: '/UseContext' },
-          { title: 'UseRef', path: '/UseRef' },
-          { title: 'UseReducer', path: '/UseReducer' },
-          { title: 'UseDebounce', path: '/UseDebounce' },
-          { title: 'UseImperativeHandling', path: '/UseImperativeHandling' }
-        ]
-      }
-    ]
+          { title: "useState", path: "/useState" },
+          { title: "useEffect", path: "/useEffect" },
+          { title: "useMemo", path: "/useMemo" },
+          { title: "useCallback", path: "/useCallback" },
+          { title: "UseContext", path: "/UseContext" },
+          { title: "UseRef", path: "/UseRef" },
+          { title: "UseReducer", path: "/UseReducer" },
+          { title: "UseDebounce", path: "/UseDebounce" },
+          { title: "UseImperativeHandling", path: "/UseImperativeHandling" },
+        ],
+      },
+    ],
   },
 
   {
     id: 2,
-    title: 'Data Fetching',
-    text: 'Data Fetching example with https://jsonplaceholder.typicode.com/',
+    title: "Data Fetching",
+    text: "Data Fetching example with https://jsonplaceholder.typicode.com/",
     accordionItems: [
       {
-        id: '1',
-        body: [{ title: 'Data Fetching', path: '/data-fetching' }]
-      }
-    ]
+        id: "1",
+        body: [{ title: "Data Fetching", path: "/data-fetching" }],
+      },
+    ],
   },
   {
     id: 3,
-    title: 'React Query',
-    text: 'React Query is a JavaScript library designed to simplify and optimize data fetching and state management in React applications, particularly those that interact with remote data sources such as APIs. It provides a set of hooks and utilities that make it easy to fetch, cache, update, and synchronize data across components.',
+    title: "React Query",
+    text: "React Query is a JavaScript library designed to simplify and optimize data fetching and state management in React applications, particularly those that interact with remote data sources such as APIs. It provides a set of hooks and utilities that make it easy to fetch, cache, update, and synchronize data across components.",
     accordionItems: [
       {
-        id: '2',
-        body: [{ title: 'React Query', path: '/reactQuery' }]
-      }
-    ]
+        id: "2",
+        body: [{ title: "React Query", path: "/reactQuery" }],
+      },
+    ],
+  },
+  
+  {
+    id: 5,
+    title: "Admin Dashboard",
+    text: `
+           Admin Dashboard using  React, Redux, and React Table to create a data table that displays the data.
+`,
+    accordionItems: [
+      {
+        id: "4",
+        body: [{ title: "Admin-dashboard", path: "/admin-dashboard" }],
+      },
+    ],
   },
   {
     id: 4,
-    title: 'Redux',
+    title: "Redux",
     text: `
             Redux Toolkit is a package that simplifies the process of managing state and writing Redux logic in React applications. It provides several utilities and abstractions that streamline common Redux tasks, such as store setup, reducer creation, and action creation.
             Initialize Store: You create a Redux store using the createStore() function provided by Redux. You pass it the root reducer function, which combines all your application's reducers into a single reducer.
@@ -64,49 +88,56 @@ const cardData = [
 `,
     accordionItems: [
       {
-        id: '3',
-        body: [{ title: 'Redux example', path: '/redux-example' }]
-      }
-    ]
-  }
-]
+        id: "3",
+        body: [{ title: "Redux example", path: "/redux-example" }],
+      },
+    ],
+  },
+];
 
 const CardsList = () => {
   return (
-    <Container fluid>
-      <Row>
-        {cardData.map(card => (
-          <Col sm={4}>
-            <Card key={card.id} style={{ width: 'auto' }}>
-              <Accordion>
-                {card.accordionItems.map((item, index) => (
-                  <Accordion.Item eventKey={item.id} key={index}>
-                    <Accordion.Header>
-                      <Card.Body>
-                        <Card.Title>{card.title}</Card.Title>
-                        <Card.Text>{card.text}</Card.Text>
-                      </Card.Body>
-                    </Accordion.Header>
-                    <Accordion.Body>
-                      {item.body.map((subItem, subIndex) => (
+    <SimpleGrid columns={[2, null, 2]} spacing="40px">
+      {cardData.map((card) => (
+        <Box  key={card.id}>
+          <Card style={{ width: "auto" }}>
+            <CardBody>
+              <Accordion  allowMultiple>
+                {card.accordionItems.map((item) => (
+                  <AccordionItem key={item.id}>
+                    <h2>
+                      <AccordionButton>
+                        <Box as="span" flex="1" textAlign="left">
+                        <Heading as='h1' size='md' textTransform='uppercase'>
+                          {card.title}
+                          </Heading>
+                          <Text pt='2' fontSize='sm'>
+                          {card.text}
+                          </Text>
+                        </Box>
+                      </AccordionButton>
+                    </h2>
+                    <AccordionPanel pb={4}>
+                      {item.body.map((subItem) => (
                         <Link
-                          key={subIndex}
-                          to={subItem.path} // Use the path for navigation
-                          className='btn btn-link d-flex flex-column' // Style the link as a button or according to your needs
+                          key={subItem.path}
+                          to={subItem.path}
+                          className="btn btn-link d-flex flex-column"
                         >
-                          {subItem.title}
+                          <Heading as='h4' size='sm'> {subItem.title}</Heading>
+                         
                         </Link>
                       ))}
-                    </Accordion.Body>
-                  </Accordion.Item>
+                    </AccordionPanel>
+                  </AccordionItem>
                 ))}
               </Accordion>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-    </Container>
-  )
-}
+            </CardBody>
+          </Card>
+        </Box>
+      ))}
+    </SimpleGrid>
+  );
+};
 
-export default CardsList
+export default CardsList;
