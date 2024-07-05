@@ -1,39 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
-  createColumnHelper,
   useReactTable,
   getCoreRowModel,
   getPaginationRowModel,
   getSortedRowModel,
   getFilteredRowModel,
   flexRender,
-} from '@tanstack/react-table';
+} from "@tanstack/react-table";
 
-
-const columnHelper = createColumnHelper();
-
-const columns = [
-  columnHelper.accessor('title', {
-    cell: info => info.getValue(),
-    header: 'Title',
-  }),
-  columnHelper.accessor('content', {
-    cell: info => info.getValue(),
-    header: 'Content',
-  }),
-  columnHelper.accessor('author', {
-    cell: info => info.getValue(),
-    header: 'Author',
-  }),
-  columnHelper.accessor('createdAt', {
-    cell: info => info.getValue(),
-    header: 'Created At',
-  }),
-];
-
-function DataTable({ data }) {
-  const [globalFilter, setGlobalFilter] = useState('');
-
+function DataTable({ data = [], columns }) {
+  const [globalFilter, setGlobalFilter] = useState("");
   const table = useReactTable({
     data,
     columns,
@@ -52,20 +28,30 @@ function DataTable({ data }) {
       <input
         type="search"
         value={globalFilter}
-        onChange={e => setGlobalFilter(e.target.value)}
+        onChange={(e) => setGlobalFilter(e.target.value)}
         placeholder="Search..."
         className="search-input"
       />
       <table className="styled-table">
         <thead>
-          {table.getHeaderGroups().map(headerGroup => (
+          {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>
-              {headerGroup.headers.map(header => (
-                <th key={header.id} onClick={header.column.getToggleSortingHandler()}>
+              {headerGroup.headers.map((header) => (
+                <th
+                  key={header.id}
+                  onClick={header.column.getToggleSortingHandler()}
+                >
                   {header.isPlaceholder ? null : (
                     <div>
-                      {flexRender(header.column.columnDef.header, header.getContext())}
-                      {header.column.getIsSorted() ? (header.column.getIsSorted() === 'desc' ? ' 🔽' : ' 🔼') : ''}
+                      {flexRender(
+                        header.column.columnDef.header,
+                        header.getContext()
+                      )}
+                      {header.column.getIsSorted()
+                        ? header.column.getIsSorted() === "desc"
+                          ? " 🔽"
+                          : " 🔼"
+                        : ""}
                     </div>
                   )}
                 </th>
@@ -74,9 +60,9 @@ function DataTable({ data }) {
           ))}
         </thead>
         <tbody>
-          {table.getRowModel().rows.map(row => (
+          {table.getRowModel().rows.map((row) => (
             <tr key={row.id}>
-              {row.getVisibleCells().map(cell => (
+              {row.getVisibleCells().map((cell) => (
                 <td key={cell.id}>
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </td>
@@ -93,7 +79,8 @@ function DataTable({ data }) {
           Previous
         </button>
         <span>
-          Page {table.getState().pagination.pageIndex + 1} of {table.getPageCount()}
+          Page {table.getState().pagination.pageIndex + 1} of{" "}
+          {table.getPageCount()}
         </span>
         <button
           onClick={() => table.nextPage()}

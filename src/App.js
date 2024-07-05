@@ -17,8 +17,8 @@ import ReactQuery from "./pages/react-query/ReactQuery";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Counter from "./pages/redux-example/counter";
 import ParentComponent from "./pages/hooks-explained/useImperativeHandling/ParentComponent";
-import Dashboard from "./pages/admin-dashboard/dashboard";
 import { ChakraProvider } from "@chakra-ui/react";
+import Dashboard from "./pages/admin-dashboard/Dashboard";
 
 function App() {
   const queryClient = new QueryClient({
@@ -32,7 +32,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <ChakraProvider>
         <Router basename="/React-code-practices">
-          <Sidebar />
+          {/* <Sidebar /> */}
             <Routes>
               <Route path="/" element={<Homepage />} />
               <Route path="/useState" element={<Usestate />} />

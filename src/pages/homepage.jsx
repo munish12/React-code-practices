@@ -5,7 +5,7 @@ import { Box } from "@chakra-ui/react";
 
 const Homepage = () => {
   return (
-    <Box mt={20} mb={0} w='100%' p={4} bg="blue.600" centerContent>
+    <Box boxShadow='inner' p='6' rounded='md' bg='white'>
       <CardsList />
     </Box>
   );

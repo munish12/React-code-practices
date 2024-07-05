@@ -2,6 +2,9 @@
 
 .table-container {
   padding: 20px;
+  background-color: #f8f9fa; /* Light background color for the container */
+  border-radius: 8px; /* Rounded corners for the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .styled-table {
@@ -10,6 +13,9 @@
   margin: 25px 0;
   font-size: 18px;
   text-align: left;
+  background-color: #fff; /* White background for the table */
+  border-radius: 8px; /* Rounded corners for the table */
+  overflow: hidden; /* Ensures rounded corners for table */
 }
 
 .styled-table th,
@@ -19,17 +25,23 @@
 }
 
 .styled-table th {
-  background-color: #f2f2f2;
-  color: #333;
+  background-color: #343a40; /* Dark background for headers */
+  color: #fff; /* White text for headers */
   cursor: pointer;
+  font-weight: bold; /* Bold text for headers */
+  text-transform: uppercase; /* Uppercase text for headers */
 }
 
 .styled-table tbody tr:nth-of-type(even) {
-  background-color: #f9f9f9;
+  background-color: #f8f9fa; /* Light background for even rows */
 }
 
 .styled-table tbody tr:hover {
-  background-color: #f1f1f1;
+  background-color: #e9ecef; /* Slightly darker background on hover */
+}
+
+.styled-table tbody tr {
+  transition: background-color 0.3s ease; /* Smooth transition for row hover */
 }
 
 .pagination {
@@ -37,4 +49,28 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #343a40; /* Dark background for buttons */
+  color: #fff; /* White text for buttons */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for button hover */
+}
+
+.pagination button:disabled {
+  background-color: #6c757d; /* Grey background for disabled buttons */
+  cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #495057; /* Slightly lighter background on hover */
+}
+
+.pagination span {
+  font-size: 16px;
+  color: #343a40; /* Dark text for pagination info */
 }

@@ -1,50 +1,70 @@
-const initialState = {
-    posts: {
-      data: [],
-      loading: false,
-      error: null,
-    },
-    comments: {
-      data: [],
-      loading: false,
-      error: null,
-    },
-    albums: {
-      data: [],
-      loading: false,
-      error: null,
-    },
-    photos: {
-      data: [],
-      loading: false,
-      error: null,
-    },
-    todos: {
-      data: [],
-      loading: false,
-      error: null,
-    },
-    users: {
-      data: [],
-      loading: false,
-      error: null,
-    },
-  };
-  
+import {
+  handleFetchFailure,
+  handleFetchRequest,
+  handleFetchSuccess,
+} from "../utils/reducerHelper";
 
-export default (state = initialState, action) => {
-  switch (action.type) {
-    case "FETCH_POSTS_SUCCESS":
-      return { ...state, posts: action.payload };
-    case "FETCH_COMMENT_SUCCESS":
-      return { ...state, comments: action.payload };
-    case "FETCH_ALBUM_SUCCESS":
-      return { ...state, album: action.payload };
-    case "FETCH_PHOTO_SUCCESS":
-      return { ...state, photo: action.payload };
-    case "FETCH_TODO_SUCCESS":
-      return { ...state, todo: action.payload };
-    case "FETCH_USERS_SUCCESS":
-      return { ...state, users: action.payload };
+// Map base names to state keys
+const keyMapping = {
+  FETCH_POSTS: "posts",
+  FETCH_COMMENTS: "comments",
+  FETCH_ALBUMS: "albums",
+  FETCH_PHOTOS: "photos",
+  FETCH_TODOS: "todos",
+  FETCH_USERS: "users",
+};
+
+const initialState = {
+  posts: {
+    data: [],
+    loading: false,
+    error: null,
+  },
+  comments: {
+    data: [],
+    loading: false,
+    error: null,
+  },
+  albums: {
+    data: [],
+    loading: false,
+    error: null,
+  },
+  photos: {
+    data: [],
+    loading: false,
+    error: null,
+  },
+  todos: {
+    data: [],
+    loading: false,
+    error: null,
+  },
+  users: {
+    data: [],
+    loading: false,
+    error: null,
+  },
+};
+
+const rootReducer = (state = initialState, action) => {
+  // Match the action type with the regex to extract the base name and request state
+  const matches = /(.*)_(REQUEST|SUCCESS|FAILURE)/.exec(action.type);
+  if (!matches) return state;
+
+  const [, baseName, requestState] = matches;
+  const key = keyMapping[baseName]; // Map base name to the correct state key
+
+  switch (requestState) {
+    case "REQUEST":
+      return handleFetchRequest(state, key);
+    case "SUCCESS":
+      return handleFetchSuccess(state, key, action.payload);
+    case "FAILURE":
+      return handleFetchFailure(state, key, action.payload);
+    default:
+      return state;
   }
 };
+
+export default rootReducer;
