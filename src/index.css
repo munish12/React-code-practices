@@ -1,47 +1,50 @@
-/* DataTable.css */
-
+body {
+  font-family: "Plus Jakarta Display", sans-serif;
+  color: var(--chakra-colors-gray-800);
+  background-image: url('../src/assets/images/background-body-admin.png'); /* Update the path accordingly */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition-property: background-color;
+  transition-duration: var(--chakra-transition-duration-normal);
+  line-height: var(--chakra-lineHeights-base);
+}
 .table-container {
   padding: 20px;
-  background-color: #f8f9fa; /* Light background color for the container */
-  border-radius: 8px; /* Rounded corners for the container */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: #1A202C; /* Dark background */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
 }
 
 .styled-table {
   width: 100%;
   border-collapse: collapse;
   margin: 25px 0;
-  font-size: 18px;
+  font-size: 16px;
   text-align: left;
-  background-color: #fff; /* White background for the table */
-  border-radius: 8px; /* Rounded corners for the table */
-  overflow: hidden; /* Ensures rounded corners for table */
+  background-color: #2D3748; /* Slightly lighter dark background */
+  color: white;
 }
 
 .styled-table th,
 .styled-table td {
   padding: 12px 15px;
-  border: 1px solid #ddd;
+  border: 1px solid #4A5568; /* Border color */
 }
 
 .styled-table th {
-  background-color: #343a40; /* Dark background for headers */
-  color: #fff; /* White text for headers */
+  background-color: #2D3748; /* Darker background for header */
+  color: #CBD5E0; /* Light text color */
   cursor: pointer;
-  font-weight: bold; /* Bold text for headers */
-  text-transform: uppercase; /* Uppercase text for headers */
 }
 
 .styled-table tbody tr:nth-of-type(even) {
-  background-color: #f8f9fa; /* Light background for even rows */
+  background-color: #1A202C; /* Alternate row color */
 }
 
 .styled-table tbody tr:hover {
-  background-color: #e9ecef; /* Slightly darker background on hover */
-}
-
-.styled-table tbody tr {
-  transition: background-color 0.3s ease; /* Smooth transition for row hover */
+  background-color: #4A5568; /* Hover color */
 }
 
 .pagination {
@@ -49,28 +52,33 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: white;
 }
 
 .pagination button {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  background-color: #343a40; /* Dark background for buttons */
-  color: #fff; /* White text for buttons */
+  background-color: #2D3748;
+  color: white;
+  border: 1px solid #4A5568;
+  padding: 8px 12px;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth transition for button hover */
+  border-radius: 4px;
 }
 
 .pagination button:disabled {
-  background-color: #6c757d; /* Grey background for disabled buttons */
+  background-color: #4A5568;
   cursor: not-allowed;
 }
 
-.pagination button:hover:not(:disabled) {
-  background-color: #495057; /* Slightly lighter background on hover */
+.pagination input {
+  width: 50px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #4A5568;
+  background-color: #2D3748;
+  color: white;
+  text-align: center;
 }
 
 .pagination span {
-  font-size: 16px;
-  color: #343a40; /* Dark text for pagination info */
+  margin: 0 10px;
 }

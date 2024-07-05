@@ -2,14 +2,14 @@ import React from "react";
 import { Box } from "@chakra-ui/react";
 import Layout from "./Layout";
 import DataHandler from "../../components/ui/DataHandler";
+import Header from "../../components/ui/admin/Header";
+import SideNav from "../../components/ui/admin/SideNav";
+import Footer from "../../components/ui/admin/Footer";
+import Sidebar from "../../components/ui/admin/SideNav";
 
 const Dashboard = () => {
   return (
-    <Layout
-      header={<Box>Header Content</Box>}
-      nav={<Box>Nav Content</Box>}
-      footer={<Box>Footer Content</Box>}
-    >
+    <Layout header={<Header />} nav={<Sidebar />} footer={<Footer />}>
       <Box>
         <h2>Posts</h2>
         <DataHandler type="posts" />

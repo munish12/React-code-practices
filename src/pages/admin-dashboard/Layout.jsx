@@ -1,29 +1,29 @@
+// src/components/Layout.js
 import React from "react";
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Grid, GridItem, Box } from "@chakra-ui/react";
 
-const Layout = ({ header, footer, nav, children }) => {
+const Layout = ({ header, nav, footer, children }) => {
   return (
     <Grid
       templateAreas={`"header header"
-                    "nav main"
-                    "nav footer"`}
-      gridTemplateRows={"50px 1fr 30px"}
-      gridTemplateColumns={"150px 1fr"}
+                      "nav main"
+                      "nav footer"`}
+      gridTemplateRows={"70px 1fr 50px"}
+      gridTemplateColumns={"200px 1fr"}
       height="100vh"
-      gap="4"
-      color="blackAlpha.700"
-      fontWeight="bold"
+      bgGradient="linear(to-r, brand.900, brand.800)"
+      color="whiteAlpha.900"
     >
-      <GridItem pl={2} bg="orange.300" area="header">
+      <GridItem area="header" bg="brand.700" p={0} boxShadow="lg">
         {header}
       </GridItem>
-      <GridItem pl={2} bg="pink.300" area={"nav"}>
+      <GridItem area="nav" p={0}>
         {nav}
       </GridItem>
-      <GridItem pl={2} area="main">
+      <GridItem area="main" p={4}>
         {children}
       </GridItem>
-      <GridItem pl={2} bg="blue.300" area="footer">
+      <GridItem area="footer" bg="brand.700" p={0} boxShadow="lg">
         {footer}
       </GridItem>
     </Grid>

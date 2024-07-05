@@ -19,6 +19,7 @@ import Counter from "./pages/redux-example/counter";
 import ParentComponent from "./pages/hooks-explained/useImperativeHandling/ParentComponent";
 import { ChakraProvider } from "@chakra-ui/react";
 import Dashboard from "./pages/admin-dashboard/Dashboard";
+import theme from "./theme/theme";
 
 function App() {
   const queryClient = new QueryClient({
@@ -30,28 +31,28 @@ function App() {
   });
   return (
     <QueryClientProvider client={queryClient}>
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         <Router basename="/React-code-practices">
           {/* <Sidebar /> */}
-            <Routes>
-              <Route path="/" element={<Homepage />} />
-              <Route path="/useState" element={<Usestate />} />
-              <Route path="/useEffect" element={<UseEffect />} />
-              <Route path="/useMemo" element={<UseMemo />} />
-              <Route path="/useCallback" element={<UseCallback />} />
-              <Route path="/useContext" element={<UseContext />} />
-              <Route path="/UseRef" element={<UseRef />} />
-              <Route path="/UseReducer" element={<UseReducer />} />
-              <Route path="/data-fetching" element={<DataFetching />} />
-              <Route path="/UseDebounce" element={<UseDebounce />} />
-              <Route
-                path="/UseImperativeHandling"
-                element={<ParentComponent />}
-              />
-              <Route path="/reactQuery" element={<ReactQuery />} />
-              <Route path="/redux-example" element={<Counter />} />
-              <Route path="/admin-dashboard" element={<Dashboard />} />
-            </Routes>
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/useState" element={<Usestate />} />
+            <Route path="/useEffect" element={<UseEffect />} />
+            <Route path="/useMemo" element={<UseMemo />} />
+            <Route path="/useCallback" element={<UseCallback />} />
+            <Route path="/useContext" element={<UseContext />} />
+            <Route path="/UseRef" element={<UseRef />} />
+            <Route path="/UseReducer" element={<UseReducer />} />
+            <Route path="/data-fetching" element={<DataFetching />} />
+            <Route path="/UseDebounce" element={<UseDebounce />} />
+            <Route
+              path="/UseImperativeHandling"
+              element={<ParentComponent />}
+            />
+            <Route path="/reactQuery" element={<ReactQuery />} />
+            <Route path="/redux-example" element={<Counter />} />
+            <Route path="/admin-dashboard" element={<Dashboard />} />
+          </Routes>
         </Router>
       </ChakraProvider>
     </QueryClientProvider>
