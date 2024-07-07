@@ -2,7 +2,12 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Sidebar from "./components/sidebar";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Homepage from "./pages/homepage";
 import Usestate from "./pages/hooks-explained/useState/Usestate";
 import UseEffect from "./pages/hooks-explained/useEffect/UseEffect";
@@ -32,9 +37,13 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ChakraProvider theme={theme}>
-        <Router basename="/admin-dashboard/posts">
+        <Router basename="/">
           {/* <Sidebar /> */}
           <Routes>
+            <Route
+              path="/"
+              element={<Navigate to="/admin-dashboard/posts" />}
+            />
             <Route path="/react-code-practices" element={<Homepage />} />
             <Route path="/useState" element={<Usestate />} />
             <Route path="/useEffect" element={<UseEffect />} />
@@ -51,7 +60,10 @@ function App() {
             />
             <Route path="/reactQuery" element={<ReactQuery />} />
             <Route path="/redux-example" element={<Counter />} />
-            <Route path="/" element={<Dashboard type="posts" />} />
+            <Route
+              path="/admin-dashboard/posts"
+              element={<Dashboard type="posts" />}
+            />
             <Route
               path="/admin-dashboard/comments"
               element={<Dashboard type="comments" />}
