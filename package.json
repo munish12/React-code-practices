@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://munish12.github.io/",
+  "homepage": "https://munish12.github.io/Sample/",
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@chakra-ui/icons": "^2.1.1",
