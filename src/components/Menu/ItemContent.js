@@ -43,7 +43,7 @@ export function ItemContent(props) {
         </Text>
         <Flex alignItems="center">
           <ClockIcon color={navbarIcon} w="13px" h="13px" me="3px" />
-          <Text fontSize="xs" lineHeight="100%" color={navbarIcon}>
+          <Text fontSize="xs" lineHeight="100%" color={navbarIcon} mb="0">
             {props.time}
           </Text>
         </Flex>

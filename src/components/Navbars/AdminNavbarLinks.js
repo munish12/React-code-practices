@@ -95,6 +95,7 @@ export default function HeaderLinks(props) {
         >
           <Flex flexDirection="column">
             <MenuItem
+              bg="transparent"
               borderRadius="8px"
               _hover={{
                 bg: "transparent",
@@ -116,6 +117,7 @@ export default function HeaderLinks(props) {
               />
             </MenuItem>
             <MenuItem
+              bg="transparent"
               borderRadius="8px"
               _hover={{
                 bg: "transparent",
@@ -126,7 +128,6 @@ export default function HeaderLinks(props) {
               _focus={{
                 bg: "transparent",
               }}
-              _hover={{ bg: "transparent" }}
               mb="10px"
             >
               <ItemContent
@@ -138,6 +139,7 @@ export default function HeaderLinks(props) {
               />
             </MenuItem>
             <MenuItem
+              bg="transparent"
               borderRadius="8px"
               _hover={{
                 bg: "transparent",
