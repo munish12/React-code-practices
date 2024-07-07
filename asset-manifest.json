@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Sample/static/css/main.34ab7b9e.css",
-    "main.js": "/Sample/static/js/main.bb573a2c.js",
-    "static/js/453.68693753.chunk.js": "/Sample/static/js/453.68693753.chunk.js",
-    "static/media/background-body-admin.png": "/Sample/static/media/background-body-admin.9a5703c114bec6efe39b.png",
-    "service-worker.js": "/Sample/service-worker.js",
-    "index.html": "/Sample/index.html",
-    "main.34ab7b9e.css.map": "/Sample/static/css/main.34ab7b9e.css.map",
-    "main.bb573a2c.js.map": "/Sample/static/js/main.bb573a2c.js.map",
-    "453.68693753.chunk.js.map": "/Sample/static/js/453.68693753.chunk.js.map"
+    "main.css": "/React-code-practices/static/css/main.34ab7b9e.css",
+    "main.js": "/React-code-practices/static/js/main.d56c81c5.js",
+    "static/js/453.68693753.chunk.js": "/React-code-practices/static/js/453.68693753.chunk.js",
+    "static/media/background-body-admin.png": "/React-code-practices/static/media/background-body-admin.9a5703c114bec6efe39b.png",
+    "service-worker.js": "/React-code-practices/service-worker.js",
+    "index.html": "/React-code-practices/index.html",
+    "main.34ab7b9e.css.map": "/React-code-practices/static/css/main.34ab7b9e.css.map",
+    "main.d56c81c5.js.map": "/React-code-practices/static/js/main.d56c81c5.js.map",
+    "453.68693753.chunk.js.map": "/React-code-practices/static/js/453.68693753.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.34ab7b9e.css",
-    "static/js/main.bb573a2c.js"
+    "static/js/main.d56c81c5.js"
   ]
 }
