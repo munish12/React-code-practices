@@ -32,10 +32,10 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ChakraProvider theme={theme}>
-        <Router basename="/React-code-practices">
+        <Router basename="/admin-dashboard/posts/">
           {/* <Sidebar /> */}
           <Routes>
-            <Route path="/" element={<Homepage />} />
+            <Route path="/React-code-practices" element={<Homepage />} />
             <Route path="/useState" element={<Usestate />} />
             <Route path="/useEffect" element={<UseEffect />} />
             <Route path="/useMemo" element={<UseMemo />} />
@@ -51,10 +51,7 @@ function App() {
             />
             <Route path="/reactQuery" element={<ReactQuery />} />
             <Route path="/redux-example" element={<Counter />} />
-            <Route
-              path="/admin-dashboard/posts"
-              element={<Dashboard type="posts" />}
-            />
+            <Route path="/" element={<Dashboard type="posts" />} />
             <Route
               path="/admin-dashboard/comments"
               element={<Dashboard type="comments" />}

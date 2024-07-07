@@ -71,7 +71,7 @@ const cardData = [
     accordionItems: [
       {
         id: "4",
-        body: [{ title: "Admin-dashboard", path: "/admin-dashboard/posts" }],
+        body: [{ title: "Admin-dashboard", path: "/" }],
       },
     ],
   },
