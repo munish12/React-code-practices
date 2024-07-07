@@ -37,7 +37,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ChakraProvider theme={theme}>
-        <Router basename="/Sample">
+        <Router basename="/React-code-practices">
           {/* <Sidebar /> */}
           <Routes>
             <Route
