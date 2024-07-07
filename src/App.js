@@ -32,10 +32,10 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ChakraProvider theme={theme}>
-        <Router basename="/admin-dashboard/posts/">
+        <Router basename="/admin-dashboard/posts">
           {/* <Sidebar /> */}
           <Routes>
-            <Route path="/React-code-practices" element={<Homepage />} />
+            <Route path="/react-code-practices" element={<Homepage />} />
             <Route path="/useState" element={<Usestate />} />
             <Route path="/useEffect" element={<UseEffect />} />
             <Route path="/useMemo" element={<UseMemo />} />

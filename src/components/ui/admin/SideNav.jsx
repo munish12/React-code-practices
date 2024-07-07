@@ -40,7 +40,7 @@ const SideNav = () => {
   const brand = (
     <Box pt={"25px"} mb="12px">
       <Link
-        href={`${process.env.PUBLIC_URL}/#/`}
+        to={`${process.env.PUBLIC_URL}/#/`}
         target="_blank"
         display="flex"
         lineHeight="100%"
