@@ -61,7 +61,7 @@ const cardData = [
       },
     ],
   },
-  
+
   {
     id: 5,
     title: "Admin Dashboard",
@@ -71,7 +71,7 @@ const cardData = [
     accordionItems: [
       {
         id: "4",
-        body: [{ title: "Admin-dashboard", path: "/admin-dashboard" }],
+        body: [{ title: "Admin-dashboard", path: "/admin-dashboard/posts" }],
       },
     ],
   },
@@ -99,20 +99,20 @@ const CardsList = () => {
   return (
     <SimpleGrid columns={[2, null, 2]} spacing="40px">
       {cardData.map((card) => (
-        <Box  key={card.id}>
+        <Box key={card.id}>
           <Card style={{ width: "auto" }}>
             <CardBody>
-              <Accordion  allowMultiple>
+              <Accordion allowMultiple>
                 {card.accordionItems.map((item) => (
                   <AccordionItem key={item.id}>
                     <h2>
                       <AccordionButton>
                         <Box as="span" flex="1" textAlign="left">
-                        <Heading as='h1' size='md' textTransform='uppercase'>
-                          {card.title}
+                          <Heading as="h1" size="md" textTransform="uppercase">
+                            {card.title}
                           </Heading>
-                          <Text pt='2' fontSize='sm'>
-                          {card.text}
+                          <Text pt="2" fontSize="sm">
+                            {card.text}
                           </Text>
                         </Box>
                       </AccordionButton>
@@ -124,8 +124,10 @@ const CardsList = () => {
                           to={subItem.path}
                           className="btn btn-link d-flex flex-column"
                         >
-                          <Heading as='h4' size='sm'> {subItem.title}</Heading>
-                         
+                          <Heading as="h4" size="sm">
+                            {" "}
+                            {subItem.title}
+                          </Heading>
                         </Link>
                       ))}
                     </AccordionPanel>

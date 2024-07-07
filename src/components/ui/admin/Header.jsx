@@ -1,14 +1,12 @@
 import React from "react";
-import { Flex, Box, Text } from "@chakra-ui/react";
+import { Flex, Box, Text, Portal } from "@chakra-ui/react";
+import AdminNavbar from "../../../components/Navbars/AdminNavbar.js";
 
 const Header = () => {
   return (
-    <Flex justify="space-between" align="center" p={4} color="white">
-      <Text fontSize="xl" fontWeight="bold">
-        My Application
-      </Text>
-      <Box>{/* Add any other header content here */}</Box>
-    </Flex>
+    <Portal>
+      <AdminNavbar />
+    </Portal>
   );
 };
 

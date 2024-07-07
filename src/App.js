@@ -51,7 +51,30 @@ function App() {
             />
             <Route path="/reactQuery" element={<ReactQuery />} />
             <Route path="/redux-example" element={<Counter />} />
-            <Route path="/admin-dashboard" element={<Dashboard />} />
+            <Route
+              path="/admin-dashboard/posts"
+              element={<Dashboard type="posts" />}
+            />
+            <Route
+              path="/admin-dashboard/comments"
+              element={<Dashboard type="comments" />}
+            />
+            <Route
+              path="/admin-dashboard/albums"
+              element={<Dashboard type="albums" />}
+            />
+            <Route
+              path="/admin-dashboard/photos"
+              element={<Dashboard type="photos" />}
+            />
+            <Route
+              path="/admin-dashboard/todos"
+              element={<Dashboard type="todos" />}
+            />
+            <Route
+              path="/admin-dashboard/users"
+              element={<Dashboard type="users" />}
+            />
           </Routes>
         </Router>
       </ChakraProvider>

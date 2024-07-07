@@ -10,7 +10,9 @@ import {
 } from "../../actions";
 import DataTable from "../DataTable";
 import generateColumns from "../../utils/columnHelper";
+import { Spinner, Flex, Box } from "@chakra-ui/react";
 
+// Base fields for each type
 const baseFields = {
   posts: [
     { accessor: "userId", header: "User ID" },
@@ -53,6 +55,7 @@ const baseFields = {
   ],
 };
 
+// Generate columns based on base fields
 const columnsMapping = Object.fromEntries(
   Object.entries(baseFields).map(([key, fields]) => [
     key,
@@ -60,6 +63,7 @@ const columnsMapping = Object.fromEntries(
   ])
 );
 
+// Map fetch actions to types
 const fetchMapping = {
   posts: fetchPosts,
   comments: fetchComments,
@@ -69,7 +73,7 @@ const fetchMapping = {
   users: fetchUsers,
 };
 
-const DataHandler = ({ type }) => {
+const DataHandler = ({ type, tableName }) => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state[type]);
 
@@ -80,13 +84,30 @@ const DataHandler = ({ type }) => {
   const columns = columnsMapping[type];
 
   return (
-    <div>
-      {data.loading && <p>Loading...</p>}
-      {data.error && <p>Error: {data.error}</p>}
-      {!data.loading && !data.error && (
-        <DataTable data={data.data} columns={columns} />
+    <Box position="relative" mt="15px" minHeight="800px">
+      {data.loading && (
+        <Flex
+          justify="center"
+          align="center"
+          position="absolute"
+          top="0"
+          left="0"
+          right="0"
+          bottom="0"
+          bg="rgba(0, 0, 0, 0.6)"
+          zIndex="10"
+          borderRadius="15px"
+        >
+          <Spinner size="xl" color="brand.200" />
+        </Flex>
       )}
-    </div>
+      <Box opacity={data.loading ? "0.4" : "1"}>
+        {!data.loading && !data.error && (
+          <DataTable data={data.data} columns={columns} tableName={tableName} />
+        )}
+        {data.error && <Box color="red.500">Error: {data.error}</Box>}
+      </Box>
+    </Box>
   );
 };
 
