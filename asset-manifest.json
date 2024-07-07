@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/React-code-practices/admin-dashboard/posts/static/css/main.34ab7b9e.css",
-    "main.js": "/React-code-practices/admin-dashboard/posts/static/js/main.bf329d84.js",
+    "main.js": "/React-code-practices/admin-dashboard/posts/static/js/main.3e58f8ff.js",
     "static/js/453.68693753.chunk.js": "/React-code-practices/admin-dashboard/posts/static/js/453.68693753.chunk.js",
     "static/media/background-body-admin.png": "/React-code-practices/admin-dashboard/posts/static/media/background-body-admin.9a5703c114bec6efe39b.png",
     "service-worker.js": "/React-code-practices/admin-dashboard/posts/service-worker.js",
     "index.html": "/React-code-practices/admin-dashboard/posts/index.html",
     "main.34ab7b9e.css.map": "/React-code-practices/admin-dashboard/posts/static/css/main.34ab7b9e.css.map",
-    "main.bf329d84.js.map": "/React-code-practices/admin-dashboard/posts/static/js/main.bf329d84.js.map",
+    "main.3e58f8ff.js.map": "/React-code-practices/admin-dashboard/posts/static/js/main.3e58f8ff.js.map",
     "453.68693753.chunk.js.map": "/React-code-practices/admin-dashboard/posts/static/js/453.68693753.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.34ab7b9e.css",
-    "static/js/main.bf329d84.js"
+    "static/js/main.3e58f8ff.js"
   ]
 }
